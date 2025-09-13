@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+  <li><a href="#edit" id="edit-link">Edit Page</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+    </nav>
+  </header>
+  <script src="theme.js"></script>
+
+  <section id="home" class="hero">
+    <img src="profile.jpg" alt="Profile picture" class="profile-pic">
+    <div class="hero-text">
+      <h1>Hi, I'm Marc Red Caspe</h1>
+      <p>I'm a web developer</p>
+      <a href="#hobbies" class="btn">View what I can do</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Marc Red Caspe, I am passionate about building clean, user-friendly experiences on the web. 
+      Explore my background on the About page, learn about my expertise on Skills, see what I enjoy on Hobbies, 
+      and feel free to reach out via the Contact page. Thanks for visiting!
+    </p>
+  </section>
+
+  <section id="hobbies" class="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobby-list">
+      <div class="hobby">
+        <img src="chess.jpg" alt="Hobby 1">
+        <h4>Chess</h4>
+      </div>
+      <div class="hobby">
+        <img src="webdev.jpg" alt="Hobby 2">
+        <h4>Developing Websites</h4>
+      </div>
+      <div class="hobby">
+        <img src="travel.jpg" alt="Hobby 3">
+        <h4>Traveling</h4>
+      </div>
+      <div class="hobby">
+        <img src="music.jpg" alt="Hobby 3">
+        <h4>Music</h4>
+      </div>
+      <div class="hobby">
+        <img src="indie games.jpg" alt="Hobby 3">
+        <h4>Gaming</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <p>I am proficient in the following:</p>
+    <ul>
+      <li><img src="C logo.png" alt="C"> C</li>
+      <li><img src="java logo.jpg" alt="Java"> Java</li>
+      <li><img src="sql logo.jpg" alt="SQL"> SQL</li>
+      <li><img src="html logo.jpg" alt="HTML"> HTML</li>
+      <li><img src="css logo.png" alt="CSS"> CSS</li>
+      <li><img src="cisco logo.png" alt="Networking"> Basic Networking</li>
+    </ul>
+  </section>
+
+   <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Please feel free to reach Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'd love to hear from you. Please contact me through my gmail or contact number
+                    listed below. I will respond to your calls or messages as fast as possible. Thank you.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>marcredcaspe@carsu.edu.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>09374839494</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ampayon</h4>
+                            <p>Butuan City, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <div id="edit-section" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; overflow:auto;">
+    <div style="background:#fff; max-width:500px; margin:40px auto; padding:2em; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+      <h2>Edit Portfolio</h2>
+      <label>Name:<br><input type="text" id="edit-name" value="Marc Red Caspe" style="width:100%"></label><br><br>
+      <label>Profile Picture:<br><input type="file" id="edit-picture" accept="image/*"></label><br><br>
+      <label>About:<br><textarea id="edit-about" style="width:100%" rows="3">Hello! I’m Marc Red Caspe, I am passionate about building clean, user-friendly experiences on the web. 
+Explore my background on the About page, learn about my expertise on Skills, see what I enjoy on Hobbies, 
+and feel free to reach out via the Contact page. Thanks for visiting!</textarea></label><br><br>
+      <label>Hobbies (comma separated):<br><input type="text" id="edit-hobbies" value="Chess, Developing Websites, Traveling, Music, Gaming" style="width:100%"></label><br><br>
+      <label>Skills (comma separated):<br><input type="text" id="edit-skills" value="C, Java, SQL, HTML, CSS, Basic Networking" style="width:100%"></label><br><br>
+      <label>Contact Message:<br><textarea id="edit-contact-msg" style="width:100%" rows="2">I'd love to hear from you. Please contact me through my gmail or contact number
+listed below. I will respond to your calls or messages as fast as possible. Thank you.</textarea></label><br><br>
+      <label>Email:<br><input type="text" id="edit-email" value="marcredcaspe@carsu.edu.com" style="width:100%"></label><br><br>
+      <label>Phone:<br><input type="text" id="edit-phone" value="09374839494" style="width:100%"></label><br><br>
+      <label>Address:<br><input type="text" id="edit-address" value="Butuan City, Philippines" style="width:100%"></label><br><br>
+      <button id="edit-save" style="background:#007bff; color:#fff; border:none; padding:0.5em 1.5em; border-radius:5px;">Save</button>
+      <button id="edit-cancel" style="margin-left:1em; background:#ccc; color:#333; border:none; padding:0.5em 1.5em; border-radius:5px;">Cancel</button>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 marcredcaspeportfolio. All rights reserved.</p>
+  </footer>
+  <script src="edit.js"></script>

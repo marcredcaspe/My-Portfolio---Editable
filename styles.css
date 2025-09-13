@@ -1,0 +1,337 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff; 
+  background: linear-gradient(135deg, #010109, #39364E, #3A12D4, #FF8602);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background: #3A12D4;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li a:hover {
+  color: #FF8602;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  text-align: left;
+  flex-wrap: wrap;
+}
+.hero img {
+  border-radius: 20px;
+  width: 220px;
+  height: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.hero p {
+  margin-bottom: 15px;
+  color: #ddd;
+}
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #FF8602;
+  color: #010109;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero .btn:hover {
+  background: #3A12D4;
+  color: #fff;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(57, 54, 78, 0.8); 
+  border-radius: 8px;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #FF8602;
+}
+.about p {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 1rem auto;
+  color: #fff;
+}
+
+/* Hobbies */
+.hobby-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.hobby {
+  text-align: center;
+  width: 180px;
+}
+.hobby img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+  text-align: center;
+}
+.skills li {
+  background: rgba(57, 54, 78, 0.9);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.skills img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;   
+  gap: 10px;            
+  margin-bottom: 1rem;
+  justify-content: center; 
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #FF8602; 
+}
+
+.contact-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+
+footer {
+  background: #3A12D4;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  margin-top: 20px;
+}
+
+  #edit-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+    overflow: auto;
+  }
+  #edit-section > div {
+    background: #fff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  #edit-section h2 {
+    margin-top: 0;
+    font-size: 2em;
+    text-align: center;
+    color: #3A12D4;
+  }
+  #edit-section label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 500;
+    color: #333;
+  }
+  #edit-section input[type="text"],
+  #edit-section textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+  #edit-section input[type="file"] {
+    margin-top: 0.3em;
+  }
+  #edit-section button {
+    margin-top: 1em;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  #edit-section button#edit-save {
+    background: #007bff;
+    color: #fff;
+  }
+  #edit-section button#edit-cancel {
+    background: #ccc;
+    color: #333;
+  }
+  @media (max-width: 600px) {
+    #edit-section > div {
+      max-width: 95vw;
+      padding: 1em;
+    }
+    #edit-section h2 {
+      font-size: 1.3em;
+    }
+  }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Toggle button styling */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+.theme-toggle:hover {
+  color: #FF8602;
+}
+
+/* Light mode */
+body.light-mode {
+  color: #2563eb;
+  background: linear-gradient(
+    135deg,
+    #ffffff,   
+    #e6e8f5,   
+    #b3c7ff,   
+    #ffd6a3    
+  );
+}
+
+/* Navbar */
+body.light-mode .navbar {
+  background: #b3c7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+body.light-mode .navbar ul li a {
+  color: #222;
+}
+body.light-mode .navbar ul li a:hover {
+  color: #FF8602; /* soft blue hover */
+}
+
+body.light-mode .hero h1 {
+  color: black;
+}
+
+body.light-mode .hero p {
+  color: black;
+}
+
+/* Sections */
+body.light-mode section {
+  background: #ffffff57;
+  color: #222;
+  border: 1px solid #e5e7eb;
+}
+body.light-mode section h2 {
+  color: #2563eb; /* light mode accent blue */
+}
+body.light-mode .about p {
+  color: #444;
+}
+
+/* Skills */
+body.light-mode .skills li {
+  background: #f9fafb;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Contact section */
+body.light-mode .contact-item i {
+  color: #2563eb;
+}
+body.light-mode .contact-item h4 {
+  color: #222;
+}
+body.light-mode .contact-item p {
+  color: #555;
+}
+
+/* Footer */
+body.light-mode footer {
+  background: #f9fafb;
+  color: #222;
+  border-top: 1px solid #e5e7eb;
+}
